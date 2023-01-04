@@ -1,28 +1,29 @@
 # dflex
-#
-영화 정보 사이트
 
+This template should help get you started developing with Vue 3 in Vite.
 
-- 인기영화 및 
-- 상영중인 영화 
-- 댓글달기
-- 카카오톡 로그인
-- 검색기능
-- 일간박스오피스
---------------------------
-- 검색
-- 책보기
-- 도서보기
-- 오디오북보기
-- 메모보기
--------------------------
-- 유튜브 채널1 
-- 유튜브 채널2 
-- 유튜브 채널3
--------------------------
-dfex 소개
-비지니스
+## Recommended IDE Setup
 
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
+## Customize configuration
 
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
