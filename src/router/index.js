@@ -1,23 +1,81 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '@/views/HomeView.vue';
+import Dflex from '@/views/Dflex.vue';
+import MovieInfo from '@/views/MovieInfo.vue';
+import BoxOffice from '@/views/BoxOffice.vue';
+import Youtube from '@/views/Youtube.vue';
+import Books from '@/views/Books.vue';
+import Login from '@/views/Login.vue';
+// import NotFuond from '@/views/NotFuond.vue';
 
+
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView,
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: Dflex,
+  },
+  {
+    path: '/movieInfo',
+    name: 'MovieInfo',
+    component: MovieInfo,
+  },
+  {
+    path: '/boxOffice',
+    name: 'BoxOfficer',
+    component: BoxOffice,
+  },
+  {
+    path: '/youtube',
+    name: 'Youtube',
+    component: Youtube,
+  },
+  {
+    path: '/books',
+    name: 'Books',
+    component: Books,
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+  },
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   name: 'NotFound',
+  //   component: NotFuond,
+  // },
+  // {
+  //   path: '/nested',
+  //   name: 'Playground',
+  //   component: Playground,
+  //   children: [
+  //     {
+  //       path: '',
+  //       name: 'PlayHome',
+  //       component: PlayHome,
+  //     },
+  //     {
+  //       path: 'one',
+  //       name: 'workOne',
+  //       component: PlayLunch,
+  //     },
+  //     {
+  //       path: 'two',
+  //       name: 'workTwo',
+  //       component: PlayTodo,
+  //     },
+  //   ],
+  // },
+];
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+  history: createWebHistory('/'),
+  routes,
+});
 
-export default router
+export default router;

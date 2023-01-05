@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import logo from '../assets/logo.svg'
+
 
 export default {
   name: 'HelloWorld',
@@ -134,7 +134,7 @@ export default {
         href: 'https://medium.com/vuetify',
       },
     ],
-    logo,
+ 
     whatsNext: [
       {
         text: 'Explore components',
