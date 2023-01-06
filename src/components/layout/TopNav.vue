@@ -42,8 +42,44 @@
             <div class="search">
                 <button type="button"><v-icon icon="mdi-magnify" ></v-icon></button>
             </div>
+            <div class="search__wrap--top ">
+                <form>
+                    <input type="text" />
+                    <v-btn
+                    variant="outlined"
+                    color="primary"
+                    >
+                    검색
+                    </v-btn>
+                </form>      
+            </div>
         </div>
     </header>
 </template>
 <style lang="scss" scoped>
+ .search__wrap--top {
+    padding: 20px 20px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #dadbdc;
+    z-index: 20;
+    background: #fff;
+    form {
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+      max-width: 1280px;
+      input {
+        flex-grow: 1;
+        border: 1px solid #dadbdc;
+        height:36px;
+        line-height: 38px;
+        font-size: 16px;
+        color:#666;
+        text-indent: 10px;
+      }     
+    }
+  }
 </style>
