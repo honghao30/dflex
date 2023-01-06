@@ -6,6 +6,7 @@ import BoxOffice from '@/views/BoxOffice.vue';
 import Youtube from '@/views/Youtube.vue';
 import Books from '@/views/Books.vue';
 import Login from '@/views/Login.vue';
+import Contac from '@/views/Contac.vue';
 // import NotFuond from '@/views/NotFuond.vue';
 
 
@@ -44,6 +45,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login,
+  },
+  {
+    path: '/contac',
+    name: 'contac',
+    component: Contac,
   },
   // {
   //   path: '/:pathMatch(.*)*',

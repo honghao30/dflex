@@ -1,5 +1,5 @@
 @import 'reset';
-
+@import 'cmp';
 header {
   padding:10px 24px 15px;
   border-bottom: 1px solid $city-grey-20;
@@ -93,4 +93,16 @@ header {
     max-width: 1280px;
     margin: 0 auto;
   }
+}
+
+//common 
+.sub-img {
+  width: 100%;
+  height:200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 500;
+  background-color: #EBEAE6;
 }
