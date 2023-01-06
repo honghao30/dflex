@@ -262,7 +262,8 @@
                     src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
                   ></v-img>
                   <v-card-item>
-                    <v-card-title>Cafe Badilico</v-card-title>
+                    <v-card-title>
+                      <RouterLink to="/MovieDetail">Badilico</RouterLink> </v-card-title>
                     <v-card-subtitle>
                       <span class="mr-1">Local Favorite</span>
                       <v-icon

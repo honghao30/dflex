@@ -42,7 +42,7 @@
             <div class="search">
                 <button type="button"><v-icon icon="mdi-magnify" ></v-icon></button>
             </div>
-            <div class="search__wrap--top ">
+            <div class="search__wrap--top " style="display:none">
                 <form>
                     <input type="text" />
                     <v-btn

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import Dflex from '@/views/Dflex.vue';
 import MovieInfo from '@/views/MovieInfo.vue';
+import MovieDetail from '@/views/MovieDetail.vue';
 import BoxOffice from '@/views/BoxOffice.vue';
 import Youtube from '@/views/Youtube.vue';
 import Books from '@/views/Books.vue';
@@ -25,6 +26,11 @@ const routes = [
     path: '/movieInfo',
     name: 'MovieInfo',
     component: MovieInfo,
+  },
+  {
+    path: '/MovieDetail',
+    name: 'MovieDetail',
+    component: MovieDetail,
   },
   {
     path: '/boxOffice',
