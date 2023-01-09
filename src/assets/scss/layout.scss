@@ -7,6 +7,10 @@ header {
     margin-left: 16px;
     margin-right: 16px;
   }
+  @media #{$phone} {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 .head__nav {
   display: flex;
@@ -26,6 +30,9 @@ header {
   }
   .nav { 
     flex-grow: 1;
+    @media #{$phone} {
+      display: none;
+   }
     ul{
     display: flex;
     justify-items: center;

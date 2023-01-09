@@ -4,7 +4,7 @@
             <div class="logo">
                 <h1>
                     <RouterLink class="nav-link" active-class="active" to="/"
-              >D-Flex</RouterLink>
+              >D-Flix</RouterLink>
                 </h1>
             </div>
             <div class="nav">
@@ -38,6 +38,12 @@
               >로그인</RouterLink>
                         </li>                    
                 </ul>
+            </div>
+            <div class="mobile-menu">
+                <button type="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
             <div class="search">
                 <button type="button"><v-icon icon="mdi-magnify" ></v-icon></button>
@@ -81,5 +87,18 @@
         text-indent: 10px;
       }     
     }
+  }
+  .mobile-menu {
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display:block;
+    }
+    .bar {
+        display: block;
+        height:3px;
+        width:20px;
+        margin:5px 0;
+        background-color: #666;
+        }
   }
 </style>
