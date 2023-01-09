@@ -8,40 +8,41 @@
         :space-between="0"    
         :speed="1200"
         :parallax="true"
+        navigation
+        :pagination="{ clickable: true }"   
         @swiper="onSwiper"
         @slideChange="onSlideChange"
         >
         <swiper-slide>
             <div class="dflex__inner--box">
-                <h2>D-flix</h2>
-                <div class="description">
-                    최고를 지향하는 퍼블리싱 전문가 그룹<br>                  
-                    css 의 display:flex 의 의미와 글로벌 OTT 플랫폼인 넷플릭스의 flix 에서 유래했습니다,<br>
-                    웹의 가장 기본 골격이 되는 마크업전문가가 되겠습니다.<br>
-                    공공기관, 기업, 금융기관 등의 웹 표준<br>
-                    사이트 퍼블리싱, 웹 접근성 인증 개선, Vue.js,React 등 다양한 프로젝트를 수행했습니다.
+                <h2 data-swiper-parallax="-300">D-flix</h2>
+                <div class="description" data-swiper-parallax="-200">
+                    최고를 지향하는 퍼블리싱 전문가 그룹<br>     
+                    flex는 css속성으로 뷰 포트나 요소의 크기가 불명확하거나 동적으로 변할 때에도 효율적으로 요소를 배치, <br>정렬, 분산 시킬 수가 있습니다. <br>            
+                    css는 html과 함께 웹 페이지의 뼈대를 구성합니다.  <br>
+                    D-flix는 시맨틱 마크업한 마크업으로 개발하기 편한 또한 기획과 디자인이 의도한대로 구현합니다.
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
           <div class="dflex__inner--box">
-                <h2>D-flix</h2>
-                <dl class="outbiz__list">
+                <h2  data-swiper-parallax="-300">D-flix</h2>
+                <dl class="outbiz__list" data-swiper-parallax="-200">
                   <dt>웹사이트 퍼블리싱</dt>
-                  <dd></dd>
+                  <dd>HTML5와 CSS3.0으로 W3C에서 규정한 표준화된 규격에 적합한 마크업을 구현합니다.</dd>
                   <dt>Javascript 개발</dt>
-                  <dd></dd>
+                  <dd>UI,UX 인터렉션과 API 호출로 UX구현 </dd>
                   <dt>웹접근성 인증 개선</dt>
-                  <dd></dd>
+                  <dd>웹접근성을 준수 및 인증마크 취득을 위한 UI고도화</dd>
                   <dt>React, Vue.js UI개발</dt>
-                  <dd></dd>
+                  <dd>React, Vue.js를 이용한 UI구현</dd>
                 </dl>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="dflex__inner--box">
-                <h2>D-flix</h2>
-                <div class="description">
+                <h2  data-swiper-parallax="-300">D-flix</h2>
+                <div class="description" data-swiper-parallax="-200">
                     프로젝트 문의 <br>
                     sunghoo78@gmail.com
                 </div>
@@ -99,6 +100,7 @@ export default {
     height:100%;
     border: 1px solid #d2d2d2;
     height:80vh;
+    background-color: #f8f8f8;
     h2 {
       font-size: 70px;
     }
@@ -109,12 +111,13 @@ export default {
     }
     .outbiz__list {margin-top:30px;
     dt {
-      font-size: 20px;
+      font-size: 23px;
       font-weight: 500;
+      color:#000;
     }
     dd {
       font-size:18px;
-      margin:10px 0 20px;
+      margin:5px 0 30px;
     }
   }
 
