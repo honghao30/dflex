@@ -51,7 +51,7 @@
 
 <script setup>
 
-    import { ref,computed } from 'vue';
+    import { ref } from 'vue';
     let menuOpen = ref(false);
     menuOpen.value = !menuOpen.value;
 </script>

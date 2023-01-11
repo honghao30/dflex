@@ -84,7 +84,47 @@ header {
     }
   }
 }
+.mobile-menu {
+  display: none;
+  @media only screen and (max-width: 768px) {
+      display:block;
+      button {
+          position: relative;
+          margin-right: 16px;
+          .bar {
+              &:nth-child(1) {
+                  top:3px;
+                  left:0;
+              }
+              &:nth-child(2) {
+                  top:12px;
+                  left:0;
+              }   
+          }
+          &.menuOpen {
+          .bar {
+              &:nth-child(1) {
+                  transform: rotate(-47deg);
+                  top: 11px;
+              }
+              &:nth-child(2) {
+                  transform: rotate(47deg);
+              }                
+             }
+          }
 
+      }
+  }
+  .bar {
+          display: block;
+          position: absolute;
+          height:3px;
+          width:22px;
+          margin:5px 0;
+          background-color: #666;
+          transition: all 0.3s;
+      }
+}
 .container {
   overflow: hidden;
   position: relative;
