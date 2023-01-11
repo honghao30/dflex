@@ -90,10 +90,14 @@ export default {
 
 <style lang="scss" scoped>
   .movie__slider {height:80vh;}
-  .dflex__wrap {padding:100px 50px;
+  .dflex__wrap {
+    padding:100px 50px;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      padding:50px 20px;
+    }
   }
   .dflex__inner--box {
     padding:70px;
@@ -101,23 +105,41 @@ export default {
     border: 1px solid #d2d2d2;
     height:80vh;
     background-color: #f8f8f8;
+    @media screen and (max-width: 768px) {
+      padding:20px;
+    }
     h2 {
       font-size: 70px;
+      @media screen and (max-width: 768px) {
+        font-size: 45px;
+      }
     }
     .description {
       font-size:20px;
       margin: 30px 0;
       line-height: 40px;
+      @media screen and (max-width: 768px) {
+        font-size:16px;
+        margin: 20px 0;
+        line-height: 30px;
+      }
     }
-    .outbiz__list {margin-top:30px;
+    .outbiz__list {
+      margin-top:30px;
     dt {
       font-size: 23px;
       font-weight: 500;
       color:#000;
+      @media screen and (max-width: 768px) {
+        font-size:18px;
+      }
     }
     dd {
       font-size:18px;
       margin:5px 0 30px;
+      @media screen and (max-width: 768px) {
+        font-size:15px;
+      }
     }
   }
 

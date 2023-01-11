@@ -1,18 +1,17 @@
 <template>
   <div class="container">
     <div class="article__wrap">
-      <div class="loginpage">
-        <button type="button">
-          <img src="https://raw.githubusercontent.com/honghao30/dflex/main/public/kakao_login_medium_narrow.png" alt="카카오톡 로그인" />
-        </button>
-      </div>
-
+        <Login />
     </div>
   </div>
 </template>
 
 <script>
+import Login from '@/components/util/Login.vue';
 export default {
+  components: {
+    Login,
+  },
   setup () {
     
 

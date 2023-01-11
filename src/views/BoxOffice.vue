@@ -132,5 +132,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sub-img {
+  background: url('https://raw.githubusercontent.com/honghao30/dflex/main/images/box.jpg') no-repeat center top;
+  background-size: auto 250px;
+  color:#fff;
+}
 
 </style>

@@ -17,6 +17,12 @@ header {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  .head__nav--inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center; 
+  }
   .logo {
     justify-content: flex-start;
     flex-grow: 1;
@@ -32,6 +38,20 @@ header {
     flex-grow: 1;
     @media #{$phone} {
       display: none;
+      &.menuOpen {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 64px;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 20;
+        padding: 20px;
+        ul {
+          flex-direction: column;
+        }
+      }
    }
     ul{
     display: flex;
@@ -45,6 +65,9 @@ header {
         color: #222;
         line-height: 1.500em;
         font-family: 'Noto Sans KR', '돋움', Dotum, sans-serif;
+        @media #{$phone}{
+          display: block;
+        }
       }
       ul {
       display: none;
