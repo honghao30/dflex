@@ -5,52 +5,31 @@
           </div>
           <div class="movie-rangking__wrap">
               <table class="table table-list">
-                <caption></caption>
+                <caption><span class="ir-text">순위,영화명,개봉일,누적관객수,전주대비 로 구성된 일간 박스 오피스</span></caption>
+                <colgroup>
+                  <col width="100" />
+                  <col width="600" />
+                  <col width="150" />
+                  <col width="150" />
+                  <col width="150" />
+                </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">순위</th>
                     <th scope="col">영화명</th>
                     <th scope="col">개봉일</th>
                     <th scope="col">누적관객수</th>
-                    <th scope="col">전주대비</th>
+                    <th scope="col">순위변화</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-l">물의 길 : 아바타</td>
-                    <td>2022.12.30</td>
-                    <td>20000</td>
-                    <td>150</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-l">물의 길 : 아바타</td>
-                    <td>2022.12.30</td>
-                    <td>20000</td>
-                    <td>150</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-l">물의 길 : 아바타</td>
-                    <td>2022.12.30</td>
-                    <td>20000</td>
-                    <td>150</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-l">물의 길 : 아바타</td>
-                    <td>2022.12.30</td>
-                    <td>20000</td>
-                    <td>150</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-l">물의 길 : 아바타</td>
-                    <td>2022.12.30</td>
-                    <td>20000</td>
-                    <td>150</td>
-                  </tr>                                                                        
+                  <tr
+                    v-for="(Rangking, index) in DailyRaingKing"
+                    :key="`${Rangking.id}-${index}`"                  
+                  >
+                    <DailyTable                     
+                    :dailyRk="Rangking" />
+                  </tr>                                                                                         
                 </tbody>
               </table>                                                     
           </div>
@@ -58,18 +37,22 @@
 </template>
 
 <script>
+import getBoxRangking from '@/api/getBoxRangking';
+import DailyTable from './DailyTable.vue';
+
 import { onMounted } from 'vue';
 
-import getBoxRangking from '@/api/getBoxRangking';
 export default {
+  components: { DailyTable },
   setup () {
-    const { DailyRangk } =  getBoxRangking();
+    const { BoxData,DailyRaingKing } =  getBoxRangking();
 
     onMounted(() => {
-      DailyRangk();
+      BoxData(); 
     });
     return {
-      DailyRangk,
+      BoxData,    
+      DailyRaingKing,
     };
   }
 }

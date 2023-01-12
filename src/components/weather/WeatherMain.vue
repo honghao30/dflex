@@ -67,11 +67,19 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
+
+import getWeather from '@/api/getWeather';
 export default {
   setup () {
-    
+    const { Weather } =  getWeather();
 
-    return {}
+    onMounted(() => {
+      Weather();
+    });
+    return {
+      Weather,
+    };
   }
 }
 </script>
