@@ -4,8 +4,8 @@ header {
   padding:10px 24px 15px;
   border-bottom: 1px solid $city-grey-20;
   @media #{$notebook} {
-    margin-left: 16px;
-    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   @media #{$phone} {
     margin-left: 0px;
