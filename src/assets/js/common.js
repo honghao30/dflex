@@ -21,6 +21,15 @@ let todayData = String(fullyear) + String(month) + String(date);
 let dailyData = String(fullyear) + String(month) + String(ydate);
 let WeeklyData = String(fullyear) + String(month) + String(ydate7);
 
+const prevDay = (n) => {
+    let prevD = (new Date().getDate() - n ) < 10  ? '0' + (new Date().getDate() - n)  : new Date().getDate() - n;
+    return prevD;
+}
+const nextDay = (n) => {
+    let nextD = (new Date().getDate() + n ) < 10  ? '0' + (new Date().getDate() + n)  : new Date().getDate() + n;
+    return nextD;
+}
+
 function getTodayLabel() {    
     var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');    
     var today = new Date().getDay();
@@ -28,11 +37,29 @@ function getTodayLabel() {
     return todayLabel;
 }
 
+let todayPrint =  String(fullyear) + '년 ' + String(month) + '월 ' + String(date) + '일 ' + hh + '시';
 
-let liveTimes = setInterval(() => {
-    console.log('실시간',nowData)
-}, 1000);
+// let liveTimes = setInterval(() => {
+//     console.log('실시간',nowData)
+// }, 1000);
 
-export { dailyData, WeeklyData,liveTimes,todayData,getTodayLabel,ydate7};
+
+//날짜 계산
+const calcTime = (times) => {
+    let newData = new Date(times * 1000);
+    let sunHous = newData.getHours() < 10 ? '0' + newData.getHours(): newData.getHours(); 
+    let sumMinutes = newData.getMinutes() < 10  ? '0' + newData.getMinutes() : newData.getMinutes();
+    let sunTiems = sunHous + '시 ' + sumMinutes + '분';    
+    //return { "hours":sunHous,"times":sunTiems };
+    return sunTiems ;
+}
+const calcHuos = (times) => {
+    let newData = new Date(times * 1000);
+    let sunHous = newData.getHours() < 10 ? '0' + newData.getHours(): newData.getHours(); 
+    //return { "hours":sunHous,"times":sunTiems };
+    return sunHous ;
+}
+
+export { dailyData, calcTime,calcHuos,WeeklyData,todayData,getTodayLabel,ydate7,todayPrint,hh,prevDay,nextDay};
 
  
