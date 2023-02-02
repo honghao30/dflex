@@ -140,7 +140,48 @@ header {
     margin: 0 auto;
   }
 }
-
+.movie__swiper {
+  width: 100%;
+  height:750px;  
+  .swiper {height:100%;
+    .swiper-slide {
+      position: relative;
+      .movie__poster {
+        width: 100%;
+        height: 100%;
+        background-position: center top;
+        background-size: 100% auto;                
+      }
+      .movie__info {
+        position: absolute;
+        left: 3%;
+        bottom: 10%;
+        color:#fff;
+        h2 {
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .movie__info-detail {
+          margin-top: 10px;
+          font-size: 13px;
+        }
+        .description {
+          margin-top: 15px;
+          font-size: 16px;    
+          max-width: 60%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* 라인수 */
+          -webkit-box-orient: vertical;
+          word-wrap: break-word;
+          line-height: 1.2em;
+          height: 3.6em;                
+        }
+      }
+    }
+  }
+}
 .footer {
   color: #666;
   background-color: #f8f8f8;
@@ -176,3 +217,37 @@ header {
   font-weight: 500;
   background-color: #EBEAE6;
 }
+
+.movie__sect {
+  h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+.movie-list__wrap {
+  width: 100%;
+  overflow-x: auto;
+  @media screen and (max-width: 768px) {
+    overflow-x: auto;
+  }
+  .movie-list__wrap--scroll {
+      display: flex;
+      gap:20px;
+      width: fit-content;
+      @media screen and (max-width: 768px) {
+        width:200%;
+      }
+  }
+}
+.descriptions {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 3.6em;  
+}
+.v-row {margin: 0;}

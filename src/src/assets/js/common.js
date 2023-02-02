@@ -21,6 +21,15 @@ let todayData = String(fullyear) + String(month) + String(date);
 let dailyData = String(fullyear) + String(month) + String(ydate);
 let WeeklyData = String(fullyear) + String(month) + String(ydate7);
 
+const prevDay = (n) => {
+    let prevD = (new Date().getDate() - n ) < 10  ? '0' + (new Date().getDate() - n)  : new Date().getDate() - n;
+    return prevD;
+}
+const nextDay = (n) => {
+    let nextD = (new Date().getDate() + n ) < 10  ? '0' + (new Date().getDate() + n)  : new Date().getDate() + n;
+    return nextD;
+}
+
 function getTodayLabel() {    
     var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');    
     var today = new Date().getDay();
@@ -51,6 +60,6 @@ const calcHuos = (times) => {
     return sunHous ;
 }
 
-export { dailyData, calcTime,calcHuos,WeeklyData,todayData,getTodayLabel,ydate7,todayPrint,hh};
+export { dailyData, calcTime,calcHuos,WeeklyData,todayData,getTodayLabel,ydate7,todayPrint,hh,prevDay,nextDay};
 
  
