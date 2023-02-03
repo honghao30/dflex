@@ -6,33 +6,33 @@
                     :loading="loading"
                     class="mx-auto my-6"
                     max-width="250"
-                    v-for="(nowPlaying, index) in nowPlayingList"
-                    :key="`${nowPlaying.id}-${index}`"
+                    v-for="(topRated, index) in topRatedList"
+                    :key="`${topRated.id}-${index}`"
  
                   >
-                    <vCardItemNowPlaying :Playing="nowPlaying" />
+                    <vCardItemTopRated :TopRatemovie="topRated" />
                   </v-card> 
                 </div>                                                         
               </div>
 </template>
 <script>
-import getMovie from '@/api/getMovie';
-import vCardItemNowPlaying from '@/components/movie/card/vCardItemNowPlaying.vue';
+import getRateMovie from '@/api/getMovieTopRate';
+import vCardItemTopRated from '@/components/movie/card/vCardItemTopRated.vue';
 import { onMounted } from 'vue';
 
 export default {
   components: {
-    vCardItemNowPlaying,
+    vCardItemTopRated,
   },
   setup () {
-    const { nowPlaying,nowPlayingList } =  getMovie();
+    const { topRatedList,topRatedMovie } =  getRateMovie();
 
     onMounted(() => {
-        nowPlaying(); 
+      topRatedMovie(); 
     });
     return {          
-        nowPlaying,
-        nowPlayingList,
+      topRatedList,
+      topRatedMovie,
     };
   }
 }

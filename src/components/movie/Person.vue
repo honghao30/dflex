@@ -6,33 +6,33 @@
                     :loading="loading"
                     class="mx-auto my-6"
                     max-width="250"
-                    v-for="(nowPlaying, index) in nowPlayingList"
-                    :key="`${nowPlaying.id}-${index}`"
+                    v-for="(person, index) in personList"
+                    :key="`${person.id}-${index}`"
  
                   >
-                    <vCardItemNowPlaying :Playing="nowPlaying" />
+                    <vCardItemPerson :PersonN="person" />
                   </v-card> 
                 </div>                                                         
               </div>
 </template>
 <script>
-import getMovie from '@/api/getMovie';
-import vCardItemNowPlaying from '@/components/movie/card/vCardItemNowPlaying.vue';
+import getPerson from '@/api/getPeaple';
+import vCardItemPerson from '@/components/movie/card/vCardItemPerson.vue';
 import { onMounted } from 'vue';
 
 export default {
   components: {
-    vCardItemNowPlaying,
+    vCardItemPerson,
   },
   setup () {
-    const { nowPlaying,nowPlayingList } =  getMovie();
+    const { personList,PersonNow } =  getPerson();
 
     onMounted(() => {
-        nowPlaying(); 
+      PersonNow(); 
     });
     return {          
-        nowPlaying,
-        nowPlayingList,
+      personList,
+      PersonNow,
     };
   }
 }
